@@ -1,0 +1,7 @@
+
+<h1>Coupons for the following stores are in the system:</h1><br>
+
+<% @coupon.all.each do |c| %>
+<%= c.store %>
+<%= link_to c.coupon_code, coupon_path(c) %><br>
+<% end %>
