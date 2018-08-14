@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Index Page</title>
+  </head>
+  <body>
+    <h1>All Coupons</h1>
+    <div>
+      <% @coupons.each do |c| %>
+        <ul><%= link_to c.store, coupon_path(c) %></ul>
+        <ul><%= link_to c.coupon_code, coupon_path(c) %></ul>
+      <% end %>
+    </div>
+
+    <%= params.inspect %>
+  </body>
+</html>
